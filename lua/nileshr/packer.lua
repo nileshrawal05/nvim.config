@@ -49,5 +49,15 @@ return require('packer').startup(function(use)
 		  {"rafamadriz/friendly-snippets"},
 	  }
   }
+  use( 'nvim-tree/nvim-tree.lua' )
+  use( 'nvim-tree/nvim-web-devicons' )
+   --use {'nvim-lua/plenary.nvim'} -- Required dependency for many Lua plugins including nvim-tree
+   --use {'kyazdani42/nvim-tree.lua'}
+
+  -- Add lualine.nvim
+  use {
+      'nvim-lualine/lualine.nvim',
+      requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
 
 end)

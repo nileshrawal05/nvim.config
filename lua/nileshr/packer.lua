@@ -63,4 +63,10 @@ return require('packer').startup(function(use)
   use( 'vim-test/vim-test')
   use( 'preservim/vimux')
 
+  use {
+      'echasnovski/mini.nvim',
+      config = function()
+      end
+  }
+
 end)

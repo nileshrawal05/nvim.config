@@ -16,7 +16,6 @@ return require('packer').startup(function(use)
   use({
 
 	  'rose-pine/neovim',
-	  as = 'rose-pine',
 	  config = function()
 		  vim.cmd('colorscheme rose-pine')
 	  end
@@ -66,6 +65,10 @@ return require('packer').startup(function(use)
   use {
       'echasnovski/mini.nvim',
       config = function()
+          require('mini.map').setup()
+          require('mini.bufremove').setup()
+          require('mini.surround').setup()
+          require('mini.sessions').setup()
       end
   }
 
